@@ -412,13 +412,15 @@ def process_chat(text: str):
 # ══════════════════════════════════════════════
 #  RENDER — ZENITH AVATAR VIDEO
 # ══════════════════════════════════════════════
+import os
 st.markdown('<div class="zenith-avatar">', unsafe_allow_html=True)
-st.video(
-    st.session_state.current_video,
-    autoplay=True,
-    loop=True,
-    muted=True
-)
+video_path = st.session_state.current_video
+if os.path.exists(video_path):
+    with open(video_path, "rb") as f:
+        video_bytes = f.read()
+    st.video(video_bytes, autoplay=True, loop=True, muted=True)
+else:
+    st.warning(f"❌ Video tidak ketemu: {video_path}")
 st.markdown('</div>', unsafe_allow_html=True)
 
 # ══════════════════════════════════════════════
