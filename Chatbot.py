@@ -118,7 +118,7 @@ ZENITH_VIDEOS = {
 
     # Greeting — lambaikan tangan (video kamu yang ada sekarang)
     "greeting": [
-        "https://drive.google.com/uc?export=download&id=1JrGGTkso7JnCtPZfZ74kardgzraWOxVs",
+        "assets/HALO TEST .mp4",
         # Tambah URL lain kalau ada animasi greeting lain:
         # "https://drive.google.com/uc?export=download&id=XXXXX",
     ],
@@ -150,7 +150,7 @@ ZENITH_VIDEOS = {
 }
 
 # Fallback — video yang dipakai kalau pool kosong
-FALLBACK_VIDEO = "https://drive.google.com/uc?export=download&id=1JrGGTkso7JnCtPZfZ74kardgzraWOxVs"
+FALLBACK_VIDEO = "assets/HALO TEST .mp4"
 
 
 def get_random_video(state: str) -> str:
